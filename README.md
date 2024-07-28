@@ -8,4 +8,4 @@ https://github.com/user-attachments/assets/e28e7019-6178-43f5-b83a-348581e90b7b
 https://github.com/user-attachments/assets/a8246fe6-9f9a-4127-b60d-04328ce80da6
 
 # 削除
-Uploading SupringMusicCRUD_delete.mp4…
+https://github.com/user-attachments/assets/6c2b8d76-e08f-4a18-9aa8-8e1953a947b6
