@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.tymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>ボカロデータベース</title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css">
+	</head>
+	<body>
+		<main>
+			<div class="systemName">
+				<h2><span></span>ボカロ楽曲データベース操作システム</h2>
+			</div>
+			<div class="moveAction">
+			    <form th:action="@{/move}" method="post">
+			        <div class="moveForm">
+			            <input type="submit" value="一覧表示" name="list" />
+			        </div>
+			        <div class="moveForm">
+			            <input type="submit" value="登録" name="insert" />
+			        </div>
+			        <div class="moveForm">
+			            <input type="submit" value="更新" name="update" />
+			        </div>
+			        <div class="moveForm">
+			            <input type="submit" value="削除" name="delete" />
+			        </div>
+			    </form>
+			</div>
+			<div class="container"></div>
+		</main>
+	</body>
+</html>

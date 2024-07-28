@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ボカロ楽曲更新</title>
+	<link rel="stylesheet" type="text/css" href="../css/update.css">
+</head>
+<body>
+	<div class="systemName">
+		<h2><span></span>ボカロ楽曲更新</h2>
+	</div>
+    <form th:action="@{/update}" method="post">
+		<div class="selectdiv">
+            <select id="song_id" name="song_id" required>
+                <option value="" disabled selected>更新する曲を選択してください</option>
+                <option th:each="music : ${musicList}" 
+                        th:value="${music.song_id}" 
+                        th:text="${music.song_name}">
+                </option>
+            </select>
+        </div>
+        <div>
+            <input type="text" id="song_name" name="song_name" placeholder="新しい曲名" required>
+        </div>
+        <div id="singers-container">
+            <div>
+                <input type="text" name="singer[]" placeholder="新しい歌手" required>
+            </div>
+        </div>
+		<div class="btnContainer">
+	        <button type="button" onclick="addSinger()">歌手を追加</button>
+	        <button type="submit">更新</button>
+			<a href="/">戻る</a>
+		</div>
+    </form>
+    
+	<script src="../js/singerControl.js"></script>
+</body>
+</html>

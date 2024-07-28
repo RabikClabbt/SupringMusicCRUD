@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ボカロ楽曲登録</title>
+	<link rel="stylesheet" type="text/css" href="../css/insert.css">
+</head>
+<body>
+	<div class="systemName">
+		<h2><span></span>ボカロ楽曲登録</h2>
+	</div>
+    <form th:action="@{/confirm}" method="post">
+        <div>
+            <input type="text" id="song_name" name="song_name" placeholder="曲名" required>
+        </div>
+        <div id="singers-container">
+            <div>
+                <input type="text" name="singer[]" placeholder="歌手" required>
+            </div>
+        </div>
+		<div class="btnContainer">
+		    <button type="button" onclick="addSinger()">歌手を追加</button>
+		    <button type="submit">登録確認</button>
+			<a href="/">戻る</a>
+		</div>
+    </form>
+	<script src="../js/singerControl.js"></script>
+</body>
+</html>
