@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ボカロ楽曲削除</title>
+	<link rel="stylesheet" href="../css/delete.css">
+</head>
+<body>
+	<div class="systemName">
+		<h2><span></span>ボカロ楽曲削除</h2>
+	</div>
+    <form th:action="@{/deleteConfirm}" method="post">
+        <div class="selectdiv">
+            <select id="song_id" name="song_id" required>
+                <option value="" disabled selected>削除する曲を選択してください</option>
+                <option th:each="music : ${musicList}" 
+                        th:value="${music.song_id}" 
+                        th:text="${music.song_name}">
+                </option>
+            </select>
+        </div>
+		<div class="btnContainer">
+			<button type="submit">削除確認</button>
+			<a href="/">戻る</a>
+		</div>
+    </form>
+</body>
+</html>
