@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  width: 90vh;
   margin: 0 auto;
   background-color: #fff;
   padding: 20px;
@@ -15,8 +15,8 @@ body {
 }
 
 .systemName {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .systemName h2 {
@@ -61,6 +61,20 @@ body {
   border-bottom-color: transparent;
 }
 
+.table-wrapper {
+  max-height: 73vh;
+  overflow-y: auto;
+}
+
+.table-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.table-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .responsive-table {
   width: 100%;
   border-collapse: separate;
@@ -92,22 +106,22 @@ body {
   .responsive-table thead {
     display: none;
   }
-  
+
   .responsive-table, .responsive-table tbody, .responsive-table tr, .responsive-table td {
     display: block;
     width: 100%;
   }
-  
+
   .responsive-table tr {
     margin-bottom: 15px;
   }
-  
+
   .responsive-table td {
     text-align: right;
     padding-left: 50%;
     position: relative;
   }
-  
+
   .responsive-table td::before {
     content: attr(data-label);
     position: absolute;
@@ -121,55 +135,55 @@ body {
 }
 
 .btnContainer {
-	margin: 10px;
-	display: flex;
-	justify-content: space-around;
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .btnContainer a {
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 200px;
-    padding: 10px 25px;
-    color: #313131;
-    transition: 0.3s ease-in-out;
-    font-weight: 600;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 200px;
+  padding: 10px 25px;
+  color: #313131;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
 }
 
 .btnContainer a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .btnContainer a:before {
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: rgba(0,0,0,.1);
-    transform: translateX(-50%);
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: rgba(0,0,0,.1);
+  transform: translateX(-50%);
 }
 
 .btnContainer a:after {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #000;
-    transform: scale(0, 1);
-    transform-origin: left top;
-    transition: transform .3s;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #000;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
 }
 
 .btnContainer a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .btnContainer a:hover:after {
-    transform: scale(1, 1);
+  transform: scale(1, 1);
 }
